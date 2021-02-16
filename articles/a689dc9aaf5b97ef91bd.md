@@ -3,7 +3,7 @@ title: "Azure DevOpsでPull Request時に自動で様々なチェックを実施
 emoji: "🕵️‍♀️"
 type: "tech"
 topics: ["azuredevops","azure"]
-published: false
+published: true
 ---
 
 Azure DevOps (正確には Azure Repos) で Pull Request を活用する際に、ブランチ単位で下記のようなことを設定できます。
