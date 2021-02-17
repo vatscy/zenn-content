@@ -2,7 +2,7 @@
 title: "Azure DevOpsでPull Request時に自動で様々なチェックを実施する"
 emoji: "🕵️‍♀️"
 type: "tech"
-topics: ["azuredevops","azure"]
+topics: ["azuredevops","azure","git"]
 published: true
 ---
 
