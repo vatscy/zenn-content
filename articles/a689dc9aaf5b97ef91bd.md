@@ -1,5 +1,5 @@
 ---
-title: "Azure DevOpsでPull Request時に自動で様々なチェックを実施する"
+title: "Azure DevOps で Pull Request 時に自動で様々なチェックを実施する"
 emoji: "🕵️‍♀️"
 type: "tech"
 topics: ["azuredevops","azure","git"]
