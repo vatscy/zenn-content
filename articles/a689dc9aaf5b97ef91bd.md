@@ -12,7 +12,7 @@ Azure DevOps (正確には Azure Repos) で Pull Request を活用する際に�
 - 最低N人のコードレビューを受ける
 - 特定のレビュアーを必ず含めるようにし、通知を送る
 - レビュアーが残したコメントに応答しているか確認する
-- 関連タスクが全て完了しているか確認する
+- PRに関連する Work Item を明確にする
 
 これらを重要なブランチに設定することで品質担保に繋がります。この記事ではそれらの設定方法を解説します。
 
@@ -51,7 +51,7 @@ Azure DevOps (正確には Azure Repos) で Pull Request を活用する際に�
 
 ## レビューコメントへの応答のチェック
 
-レビュアーのコメントに対してPR作成者が応答しているかどうかをチェック項目にすることができます。
+レビュアーのコメントに対して PR作成者が応答しているかどうかをチェック項目にすることができます。
 
 ![](https://storage.googleapis.com/zenn-user-upload/ba6yajrpnofgtk8shbtdz3bu0az6)
 
@@ -67,16 +67,18 @@ Azure DevOps (正確には Azure Repos) で Pull Request を活用する際に�
 
 また、「Build expiration」では、パイプライン実行後にブランチに新しいコミットが増えた場合の挙動を設定できます。
 
-## 関連する Work Item の完了チェック
+## 関連する Work Item のチェック
 
-PRに紐付けられた Work Item が全て Closed になっているかのチェックができます。
+Work Item と PR を関連付けて後から追跡できるようにするために、 Work Item の関連付けを必須化させることができます。
 
 ![](https://storage.googleapis.com/zenn-user-upload/io3117win4aagyxg0blidzodg10q)
 
-**Required** に設定すると、全て Closed になるまでマージができなくなります。
+**Required** に設定すると、 Work Item を最低1件は紐付けないとマージできなくなります。**Optional** の場合は Work Item がひとつも紐付いていない場合に警告が出るようになります。[^1]
 
 # 設定結果
 
 無事、ブランチポリシーが設定されているブランチに対するPRを作成すると、下記のように自動でチェックが実施されるようになりました🎉
 
 ![](https://storage.googleapis.com/zenn-user-upload/0btwvsb6akjnlictelmwv28dsc4r)
+
+[^1]: 当初「全て Closed になるまでマージができなくなる」と勘違いしていましたが、コメントにて[乳牛](https://zenn.dev/newgyu)さんにご指摘いただきました。ありがとうございます！
